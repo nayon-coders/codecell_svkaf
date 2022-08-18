@@ -67,33 +67,30 @@ class CategoryJson{
 
   final List FoodList = [
     {
-      "image" : "assets/images/f1.png",
-      "title" : "Farm House"
-    },
-    {
-      "image" : "assets/images/f1.png",
-      "title" : "Beverages"
+      "image" : "assets/images/f.png",
+      "title" : "Farm House",
     },
     {
       "image" : "assets/images/f2.png",
-      "title" : "Fresh Peach"
+      "title" : "Beverages"
     },
     {
       "image" : "assets/images/f3.png",
-      "title" : "Avacoda"
+      "title" : "Fresh Peach"
     },
     {
       "image" : "assets/images/f4.png",
-      "title" : "Fresh Veggie"
+      "title" : "Avacoda"
     },
     {
       "image" : "assets/images/f5.png",
-      "title" : "Tomato"
+      "title" : "Fresh Veggie"
     },
     {
       "image" : "assets/images/f6.png",
       "title" : "Tomato"
-    }
+    },
+
 
 
   ];

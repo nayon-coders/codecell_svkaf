@@ -81,7 +81,7 @@ class _SingleFoodsState extends State<SingleFoods> {
                       decoration: BoxDecoration(
 
                       ),
-                      child: Image.asset("assets/images/${widget.thumbnil}"),
+                      child: Image.asset("${widget.thumbnil}"),
                     ),
 
                     Positioned(
