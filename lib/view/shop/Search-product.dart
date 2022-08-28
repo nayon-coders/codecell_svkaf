@@ -1,6 +1,8 @@
 import 'package:b2b/Utility/color.dart';
+import 'package:b2b/view/shop/cart-screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
+import 'package:b2b/widgets/drower.dart';
 
 import '../notification.dart';
 
@@ -47,7 +49,7 @@ class _SearchProductState extends State<SearchProduct> {
             child: Stack(
               children: [
                 Bounce(
-                  onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationScreen())),
+                  onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart())),
                   duration: Duration(milliseconds: 80),
                   child: Icon(
                     Icons.shopping_cart,
@@ -73,13 +75,10 @@ class _SearchProductState extends State<SearchProduct> {
           )
         ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image.asset("assets/images/search.png"),
-        ],
-      ),
+        drawer: AppDrawer().buildDrawer(height),
+      body: Center(
+        child: Image.asset("assets/images/nodata.png", height: 300, width: 300,),
+      )
 
     );
   }

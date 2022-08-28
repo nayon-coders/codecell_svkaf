@@ -18,13 +18,13 @@ class _RememberOpenState extends State<RememberOpen> {
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/remember-open-bg.png"),
+            image: AssetImage("assets/images/alaram-bg.png"),
             fit: BoxFit.cover
           ),
         ),
         child: Column(
           children: [
-            SizedBox(height: 100,),
+            SizedBox(height: 150,),
             Text("6 : 00 AM",
               style: TextStyle(
                   fontFamily: "Roboto",
@@ -49,14 +49,14 @@ class _RememberOpenState extends State<RememberOpen> {
                   fontWeight: FontWeight.w600
               ),
             ),
-            SizedBox(height: 100,),
+            SizedBox(height: 150,),
 
             Bounce(
               onPressed: ()=>Navigator.pop(context),
               duration: Duration(milliseconds: 800),
               child: Container(
-                width: 100,
-                  height: 100,
+                width: 170,
+                  height: 170,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage("assets/images/open.png"),

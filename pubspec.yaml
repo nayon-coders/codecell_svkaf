@@ -46,6 +46,7 @@ dependencies:
   flutter_datetime_picker: ^1.5.1
   time_pickerr: ^1.0.6
   flutter_time_picker_spinner: ^2.0.0
+  flutter_otp_text_field: ^1.1.0
 
 dev_dependencies:
   flutter_test:

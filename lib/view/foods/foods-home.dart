@@ -531,20 +531,20 @@ class _FoodHomeState extends State<FoodHome> {
                         ),
                          SizedBox(width: 20,),
                          SizedBox(
-                           width: width*.33,
+                           width: width/3.3,
                            child: Column(
                              mainAxisAlignment: MainAxisAlignment.start,
                              crossAxisAlignment: CrossAxisAlignment.start,
                              children: [
                                Text("${title}e",
                                 style:TextStyle(
-                                  fontSize: 13.sp,
-                                  fontWeight: FontWeight.w600,
+                                  fontSize: 10.sp,
+                                  fontWeight: FontWeight.bold,
                                 ),
                                ),
                                Text("${category}",
                                  style:TextStyle(
-                                   fontSize: 10.sp,
+                                   fontSize: 9.sp,
                                    fontWeight: FontWeight.w400,
                                  ),
                                ),
@@ -562,7 +562,7 @@ class _FoodHomeState extends State<FoodHome> {
                           isAdded ?Column(
                             children: [
                               Container(
-                                padding: EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 5),
+                                padding: EdgeInsets.only(left: 10, right: 10, top: 3, bottom: 3),
                                 decoration: BoxDecoration(
                                   color: appColors.mainColors,
                                   borderRadius: BorderRadius.circular(100),
@@ -859,7 +859,7 @@ class buildFoodHomeCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+      height: 100,
       width: width,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
@@ -867,7 +867,7 @@ class buildFoodHomeCategory extends StatelessWidget {
         itemBuilder: (context, index){
           return Bounce(
             duration: Duration(milliseconds: 80),
-            onPressed: () {}, //Navigator.push(context, MaterialPageRoute(builder: (context)=>SingleFoods(thumbnil: CategoryJson().FoodList[index]['images'],))),
+            onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>CategoryFoods())),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,

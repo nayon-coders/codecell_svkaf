@@ -1,4 +1,5 @@
 import 'package:b2b/Utility/color.dart';
+import 'package:b2b/view/remember-open.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
 import 'package:slide_digital_clock/slide_digital_clock.dart';
@@ -73,7 +74,7 @@ class _SetReminderState extends State<ReminderList> {
         children: [
 
           Container(
-            margin: EdgeInsets.only(top: 30),
+            margin: EdgeInsets.only(top: 50),
             child: DigitalClock(
               digitAnimationStyle: Curves.elasticOut,
               is24HourTimeFormat: false,
@@ -274,7 +275,7 @@ class _SetReminderState extends State<ReminderList> {
           SizedBox(height: 30,),
           Bounce(
             duration: Duration(milliseconds: 80),
-            onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>ReminderList())),
+            onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>RememberOpen())),
             child: Container(
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(

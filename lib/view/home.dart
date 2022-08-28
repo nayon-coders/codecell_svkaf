@@ -26,7 +26,18 @@ class _HomeScreenState extends State<HomeScreen> {
   List sliderList = [
     "assets/images/p1.jpeg",
     "assets/images/p2.jpg",
-    "assets/images/p3.jpeg",
+    "assets/images/p3.jpg",
+    "assets/images/p4.jpg",
+    "assets/images/p4.png",
+  ];
+
+  List foods = [
+    "assets/images/f.png",
+    "assets/images/f2.png",
+    "assets/images/f3.png",
+    "assets/images/f4.png",
+    "assets/images/f5.png",
+    "assets/images/f6.png",
   ];
 
 
@@ -194,7 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   border: Border.all(width: 2, color: appColors.mainColors),
                                   borderRadius: BorderRadius.circular(100)
                               ),
-                              child: Image.asset("assets/images/remember.png",)
+                              child: Image.asset("assets/images/reminder.png",)
                           ),
                           SizedBox(height: 5,),
                           Center(
@@ -226,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   border: Border.all(width: 2, color: appColors.mainColors),
                                   borderRadius: BorderRadius.circular(100)
                               ),
-                              child: Image.asset("assets/images/marketplace.png",)
+                              child: Image.asset("assets/images/market.png",)
                           ),
                           SizedBox(height: 5,),
                           Center(
@@ -258,7 +269,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   border: Border.all(width: 2, color: appColors.mainColors),
                                   borderRadius: BorderRadius.circular(100)
                               ),
-                              child: Image.asset("assets/images/foods.png",)
+                              child: Image.asset("assets/images/food.png",)
                           ),
                           SizedBox(height: 5,),
                           Center(
@@ -285,7 +296,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Nanny Service",
+                  Text("Marketplace",
                     style: TextStyle(
                       fontSize: 12.sp,
                       fontWeight: FontWeight.bold,
@@ -293,91 +304,31 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
 
-                  Text("Near from you",
-                    style: TextStyle(
-                      fontSize: 9.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: "ThemeFont",
+                  TextButton(
+                    onPressed: (){},
+                    child: Text("SEE ALL",
+                      style: TextStyle(
+                        fontSize: 9.sp,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "ThemeFont",
+                      ),
                     ),
                   )
                 ],
               ),
             ),
             SizedBox(height: 20,),
-            Container(
-              width:width,
-              height:120,
-              padding: EdgeInsets.only(left: 10,),
-              child: ListView.separated(
-                itemCount: 10,
-                itemBuilder: (context, index){
-                  return Column(
-                    children: [
-                      Bounce(
-                        duration: Duration(milliseconds: 80),
-                        onPressed: () {},//Navigator.push(context, MaterialPageRoute(builder: (context)=>Remainder())),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                                width: 70,
-                                height: 70,
-                                margin: EdgeInsets.only(left: 10),
-                                decoration: BoxDecoration(
-                                    border: Border.all(width: 2, color: appColors.mainColors),
-                                    borderRadius: BorderRadius.circular(100)
-                                ),
-                                child: Image.asset("assets/images/s1.png",)
-                            ),
-                            SizedBox(height: 5,),
-                            Column(
-                              children: [
-                                Text("House",
-                                  style: TextStyle(
-                                    fontFamily: "ThemeFont",
-                                    fontWeight: FontWeight.w200,
-                                    fontSize: 8.sp,
-                                  ),
-                                ),
-                                Text("Orchad House",
-                                  style: TextStyle(
-                                    fontFamily: "ThemeFont",
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 10.sp,
-                                  ),
-                                ),
-                                Text("30.76\$",
-                                  style: TextStyle(
-                                    fontFamily: "ThemeFont",
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 9.sp,
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      SizedBox(width: 20,),
-                    ],
-                  );
-                },
-
-                scrollDirection: Axis.horizontal, separatorBuilder: (BuildContext context, int index) {
-                  return SizedBox(width: 10);
-              },
-
-              ),
-            ),
+            buildMarketPlace(width),
 
             SizedBox(height: 30,),
+
+            //Food Place
             Padding(
               padding: EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Trash Cleaning",
+                  Text("Foodplace",
                     style: TextStyle(
                       fontSize: 12.sp,
                       fontWeight: FontWeight.bold,
@@ -385,84 +336,24 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
 
-                  Text("Near from you",
-                    style: TextStyle(
-                      fontSize: 9.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: "ThemeFont",
+                  TextButton(
+                    onPressed: (){},
+                    child: Text("SEE ALL",
+                      style: TextStyle(
+                        fontSize: 9.sp,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "ThemeFont",
+                      ),
                     ),
                   )
                 ],
               ),
             ),
             SizedBox(height: 20,),
-            Container(
-              width:width,
-              height:120,
-              padding: EdgeInsets.only(left: 10, ),
-              child: ListView.separated(
-                itemCount: 10,
-                itemBuilder: (context, index){
-                  return Column(
-                    children: [
-                      Bounce(
-                        duration: Duration(milliseconds: 80),
-                        onPressed: () {},//Navigator.push(context, MaterialPageRoute(builder: (context)=>Remainder())),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                                width: 70,
-                                height: 70,
-                                margin: EdgeInsets.only(left: 10),
-                                decoration: BoxDecoration(
-                                    border: Border.all(width: 2, color: appColors.mainColors),
-                                    borderRadius: BorderRadius.circular(100)
-                                ),
-                                child: Image.asset("assets/images/s1.png",)
-                            ),
-                            SizedBox(height: 5,),
-                            Column(
-                              children: [
-                                Text("House",
-                                  style: TextStyle(
-                                    fontFamily: "ThemeFont",
-                                    fontWeight: FontWeight.w200,
-                                    fontSize: 8.sp,
-                                  ),
-                                ),
-                                Text("Orchad House",
-                                  style: TextStyle(
-                                    fontFamily: "ThemeFont",
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 10.sp,
-                                  ),
-                                ),
-                                Text("30.76\$",
-                                  style: TextStyle(
-                                    fontFamily: "ThemeFont",
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 9.sp,
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      SizedBox(width: 20,),
-                    ],
-                  );
-                },
+            buildFoodPlace(width),
 
-                scrollDirection: Axis.horizontal, separatorBuilder: (BuildContext context, int index) {
-                return SizedBox(width: 10);
-              },
 
-              ),
-            ),
-
+            //Market Place
             SizedBox(height: 30,),
             Text("Marketplace",
               style: TextStyle(
@@ -613,12 +504,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 image: DecorationImage(
-                                    image: AssetImage("assets/images/s2.png")
+                                    image: AssetImage("assets/images/h2.png"),
+                                    fit: BoxFit.cover
                                 )
                             ),
                           ),
                           SizedBox(height: 3,),
-                          Text("New uploded",
+                          Text("New uploaded",
                             style: TextStyle(
                               fontSize: 12.sp,
                               fontWeight: FontWeight.bold,
@@ -636,7 +528,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 image: DecorationImage(
-                                    image: AssetImage("assets/images/s2.png")
+                                    image: AssetImage("assets/images/h2.png"),
+                                  fit: BoxFit.cover
                                 )
                             ),
                           ),
@@ -653,99 +546,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   )
                 ],
-              ),
-            ),
-
-            SizedBox(height: 30,),
-            Padding(
-              padding: EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Old Market",
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "ThemeFont",
-                    ),
-                  ),
-
-                  Text("Near from you",
-                    style: TextStyle(
-                      fontSize: 9.sp,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: "ThemeFont",
-                    ),
-                  )
-                ],
-              ),
-            ),
-
-            SizedBox(height: 20,),
-            Container(
-              width:width,
-              height:120,
-              padding: EdgeInsets.only(left: 10,),
-              child: ListView.separated(
-                itemCount: 10,
-                itemBuilder: (context, index){
-                  return Column(
-                    children: [
-                      Bounce(
-                        duration: Duration(milliseconds: 80),
-                        onPressed: () {},//Navigator.push(context, MaterialPageRoute(builder: (context)=>Remainder())),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                                width: 70,
-                                height: 70,
-                                margin: EdgeInsets.only(left: 10),
-                                decoration: BoxDecoration(
-                                    border: Border.all(width: 2, color: appColors.mainColors),
-                                    borderRadius: BorderRadius.circular(100)
-                                ),
-                                child: Image.asset("assets/images/s1.png",)
-                            ),
-                            SizedBox(height: 5,),
-                            Column(
-                              children: [
-                                Text("House",
-                                  style: TextStyle(
-                                    fontFamily: "ThemeFont",
-                                    fontWeight: FontWeight.w200,
-                                    fontSize: 8.sp,
-                                  ),
-                                ),
-                                Text("Orchad House",
-                                  style: TextStyle(
-                                    fontFamily: "ThemeFont",
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 10.sp,
-                                  ),
-                                ),
-                                Text("30.76\$",
-                                  style: TextStyle(
-                                    fontFamily: "ThemeFont",
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 9.sp,
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      SizedBox(width: 30,),
-                    ],
-                  );
-                },
-
-                scrollDirection: Axis.horizontal, separatorBuilder: (BuildContext context, int index) {
-                return SizedBox(width: 10);
-              },
-
               ),
             ),
 
@@ -767,6 +567,148 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       )
     );
+  }
+
+  Container buildMarketPlace(double width) {
+    return Container(
+            width:width,
+            height:130,
+            padding: EdgeInsets.only(left: 10,),
+            child: ListView.separated(
+              itemCount: sliderList.length,
+              itemBuilder: (context, index){
+                return Column(
+                  children: [
+                    Bounce(
+                      duration: Duration(milliseconds: 80),
+                      onPressed: () {},//Navigator.push(context, MaterialPageRoute(builder: (context)=>Remainder())),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                              width: 70,
+                              height: 70,
+                              margin: EdgeInsets.only(left: 10),
+                              decoration: BoxDecoration(
+                                  border: Border.all(width: 2, color: appColors.mainColors),
+                                  borderRadius: BorderRadius.circular(100)
+                              ),
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(100),
+                                  child: Image.asset(sliderList[index], fit: BoxFit.cover,))
+                          ),
+                          SizedBox(height: 5,),
+                          Column(
+                            children: [
+                              Text("House",
+                                style: TextStyle(
+                                  fontFamily: "ThemeFont",
+                                  fontWeight: FontWeight.w200,
+                                  fontSize: 8.sp,
+                                ),
+                              ),
+                              Text("Orchard House",
+                                style: TextStyle(
+                                  fontFamily: "ThemeFont",
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 10.sp,
+                                ),
+                              ),
+                              Text("30.76\$",
+                                style: TextStyle(
+                                  fontFamily: "ThemeFont",
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 9.sp,
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 20,),
+                  ],
+                );
+              },
+
+              scrollDirection: Axis.horizontal, separatorBuilder: (BuildContext context, int index) {
+                return SizedBox(width: 10);
+            },
+
+            ),
+          );
+  }
+
+  Container buildFoodPlace(double width) {
+    return Container(
+            width:width,
+            height:140,
+            padding: EdgeInsets.only(left: 10, ),
+            child: ListView.separated(
+              itemCount: foods.length,
+              itemBuilder: (context, index){
+                return Column(
+                  children: [
+                    Bounce(
+                      duration: Duration(milliseconds: 80),
+                      onPressed: () {},//Navigator.push(context, MaterialPageRoute(builder: (context)=>Remainder())),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Container(
+                              width: 70,
+                              height: 70,
+                              margin: EdgeInsets.only(left: 10),
+                              decoration: BoxDecoration(
+                                  border: Border.all(width: 2, color: appColors.mainColors),
+                                  borderRadius: BorderRadius.circular(100)
+                              ),
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(100),
+                                  child: Image.asset(foods[index], fit: BoxFit.cover,))
+                          ),
+                          SizedBox(height: 5,),
+                          Column(
+                            children: [
+                              Text("House",
+                                style: TextStyle(
+                                  fontFamily: "ThemeFont",
+                                  fontWeight: FontWeight.w200,
+                                  fontSize: 8.sp,
+                                ),
+                              ),
+                              Text("Orchad House",
+                                style: TextStyle(
+                                  fontFamily: "ThemeFont",
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 10.sp,
+                                ),
+                              ),
+                              Text("30.76\$",
+                                style: TextStyle(
+                                  fontFamily: "ThemeFont",
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 9.sp,
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 20,),
+                  ],
+                );
+              },
+
+              scrollDirection: Axis.horizontal, separatorBuilder: (BuildContext context, int index) {
+              return SizedBox(width: 10);
+            },
+
+            ),
+          );
   }
 
 
@@ -819,7 +761,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Container buildSingleProduct(int index) {
     return Container(
       width: MediaQuery.of(context).size.width/2.3,
-      height: 310,
+      height: 320,
       child: Container(
         width: 150,
         height: 310,
@@ -881,8 +823,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   fontFamily: "ThemeFont"),
-            )
-            ,
+            ),
 
             SizedBox(height: 8,),
             Row(

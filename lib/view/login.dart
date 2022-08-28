@@ -9,6 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
+
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
@@ -150,7 +151,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
 
                       Bounce(
-                          duration: Duration(milliseconds: 50),
+                          duration: Duration(milliseconds: 80),
                           onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUp()));
                           },

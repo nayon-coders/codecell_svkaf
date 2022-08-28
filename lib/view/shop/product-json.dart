@@ -6,6 +6,14 @@ class ProductJson{
       "price" : "\$120",
       "sp1" : "Best One",
       "sp2" : "Original Product",
+      "image" : "assets/images/p1.png",
+    },
+    {
+      "name" : "Orchad House",
+      'cat' : "Man Shoes",
+      "price" : "\$120",
+      "sp1" : "Best One",
+      "sp2" : "Original Product",
       "image" : "assets/images/p4.png",
     },
 
@@ -31,7 +39,7 @@ class ProductJson{
       "price" : "\$120",
       "sp1" : "Best One",
       "sp2" : "Original Product",
-      "image" : "assets/images/p3.jpeg",
+      "image" : "assets/images/p4.png",
     }
   ];
 }

@@ -179,7 +179,7 @@ class _CategoryFoodsState extends State<CategoryFoods> {
     bool isFav = false,
   }) {
     return Container(
-      margin: EdgeInsets.only(bottom: 20, right: 20),
+      margin: EdgeInsets.only(bottom: 20, ),
       width: width,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -202,20 +202,20 @@ class _CategoryFoodsState extends State<CategoryFoods> {
           ),
           SizedBox(width: 20,),
           SizedBox(
-            width: width*.36,
+            width: width/3,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("${title}e",
                   style:TextStyle(
-                    fontSize: 13.sp,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 10.sp,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text("${category}",
                   style:TextStyle(
-                    fontSize: 10.sp,
+                    fontSize: 9.sp,
                     fontWeight: FontWeight.w400,
                   ),
                 ),

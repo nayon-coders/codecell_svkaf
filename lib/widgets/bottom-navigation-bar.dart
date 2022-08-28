@@ -5,6 +5,8 @@ import 'package:b2b/view/shop/shop-main.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
 
+import '../view/profile/profile.dart';
+
 class AppBottomNavigationBar extends StatefulWidget {
   final int index;
   const AppBottomNavigationBar({Key? key, this.index=0}) : super(key: key);
@@ -32,7 +34,7 @@ class _AppBottomNavigationBarState extends State<AppBottomNavigationBar> {
     HomeScreen(),
     MainShopeScreen(),
     FoodHome(),
-    Container(color: Colors.blue,),
+    Profile(),
   ];
   @override
   Widget build(BuildContext context) {

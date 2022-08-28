@@ -11,6 +11,7 @@ import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
+import 'package:sizer/sizer.dart';
 
 import '../reminder.dart';
 
@@ -27,8 +28,8 @@ class _MainShopeScreenState extends State<MainShopeScreen> {
 
   final List sliderList = [
     Image.asset("assets/images/p4.png",),
-   Image.asset( "assets/images/p1.jpeg",),
-    Image.asset("assets/images/p2.jpg",),
+    Image.asset( "assets/images/p1.jpeg",),
+    Image.asset("assets/images/p4.jpg",),
   ];
 
   @override
@@ -89,7 +90,7 @@ class _MainShopeScreenState extends State<MainShopeScreen> {
                        ),
                        Stack(
                          children: [
-                           Image.asset("assets/images/p3.jpeg", width: width, height: 250, fit: BoxFit.cover,),
+                           Image.asset("assets/images/p4.png", width: width, height: 250, fit: BoxFit.cover,),
                            Container(
                              width: width,
                              height: 250,
@@ -269,7 +270,7 @@ class _MainShopeScreenState extends State<MainShopeScreen> {
                              style: TextStyle(
                                  fontFamily: "ThemeFont",
                                  fontWeight: FontWeight.bold,
-                                 fontSize: 15,
+                                 fontSize: 10.sp,
                              ),
                            ))
                      ],
@@ -304,20 +305,20 @@ class _MainShopeScreenState extends State<MainShopeScreen> {
                              style: TextStyle(
                                fontFamily: "ThemeFont",
                                fontWeight: FontWeight.bold,
-                               fontSize: 15,
+                               fontSize: 10.sp,
                              ),
                            ))
                      ],
                    ),
                    Container(
-                     height: 80,
+                     height: 100,
                      width: width,
                      child: ListView.separated(
                        scrollDirection: Axis.horizontal,
                        itemCount: CategoryJson().categoryJson.length,
                          itemBuilder: (context, index){
                          return Bounce(
-                           duration: Duration(milliseconds: 80),
+                           duration: const Duration(milliseconds: 80),
                            onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>Remainder())),
                            child: Column(
                              mainAxisAlignment: MainAxisAlignment.center,
@@ -326,18 +327,18 @@ class _MainShopeScreenState extends State<MainShopeScreen> {
                                Container(
                                    width: 60,
                                    height: 60,
-                                   padding: EdgeInsets.all(10),
+                                   padding: const EdgeInsets.all(10),
                                    alignment: Alignment.center,
                                    decoration: BoxDecoration(
                                        border: Border.all(width: 2, color: appColors.mainColors),
                                        borderRadius: BorderRadius.circular(100)
                                    ),
-                                   child: Image.asset("${CategoryJson().categoryJson[index]["image"]}",)
+                                   child: Image.asset("${CategoryJson().categoryJson[index]["image"]}", fit: BoxFit.cover,)
                                ),
-                               SizedBox(height: 5,),
+                               const SizedBox(height: 5,),
                                Center(
                                  child: Text("${CategoryJson().categoryJson[index]["title"]}",
-                                   style: TextStyle(
+                                   style: const TextStyle(
                                      fontFamily: "ThemeFont",
                                      fontWeight: FontWeight.w200,
                                      fontSize: 12,
@@ -348,7 +349,7 @@ class _MainShopeScreenState extends State<MainShopeScreen> {
                            ),
                          );
                          }, separatorBuilder: (BuildContext context, int index) {
-                         return SizedBox(width: 20,);
+                         return const SizedBox(width: 20,);
                      },
                      ),
                    ),

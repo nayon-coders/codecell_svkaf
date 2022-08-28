@@ -1,5 +1,6 @@
 import 'package:b2b/Utility/color.dart';
 import 'package:b2b/view/remember-open.dart';
+import 'package:b2b/view/reminder-list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
@@ -48,7 +49,7 @@ bool isChecked = true;
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Bounce(
-                onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>RememberOpen())),
+                onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>ReminderList())),
                 duration: Duration(milliseconds: 80),
                 child:Text("Done",
                   style: TextStyle(
@@ -65,8 +66,8 @@ bool isChecked = true;
         children: [
           Positioned(
             top: 10,
-            left: 40,
             child: SizedBox(
+              width: width,
               height: height/2.5,
               child:  hourMinute12HCustomStyle(),
             ),
@@ -77,10 +78,7 @@ bool isChecked = true;
               height: height/2.3,
               width: width,
               decoration:  const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/remember-bg.png", ),
-                  fit: BoxFit.cover,
-                ),
+
 
               ),
               child: SingleChildScrollView(
@@ -277,6 +275,14 @@ bool isChecked = true;
     return new TimePickerSpinner(
 
       is24HourMode: false,
+      normalTextStyle:TextStyle(
+        fontSize: 18.sp
+      ),
+      highlightedTextStyle:TextStyle(
+          fontSize: 22.sp
+      ),
+
+
 
       spacing: 50,
       itemHeight: 80,

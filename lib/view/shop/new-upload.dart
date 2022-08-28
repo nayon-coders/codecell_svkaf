@@ -3,6 +3,7 @@ import 'package:b2b/view/shop/product-json.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
 
+import '../foods/Category.dart';
 import 'cart-screen.dart';
 
 class NewUploaded extends StatefulWidget {
@@ -86,7 +87,7 @@ class _NewUploadedState extends State<NewUploaded> {
                     // ),
                     TextButton(
                         onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>NewUploaded()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>CategroyList()));
                         },
                         child: Text("Category",
                           style: TextStyle(
@@ -157,7 +158,7 @@ class _NewUploadedState extends State<NewUploaded> {
   Container buildSingleProduct(int index) {
     return Container(
       width: MediaQuery.of(context).size.width/2.4,
-      height: 310,
+      height: 330,
       child: Container(
         width: 150,
         height: 310,

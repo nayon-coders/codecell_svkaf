@@ -5,29 +5,29 @@ class CategoryJson{
       "title" : "Vegetables"
     },
     {
-      "image" : "assets/images/c1.png",
+      "image" : "assets/images/c (1).png",
       "title" : "Fruits"
     },
     {
-      "image" : "assets/images/c2.png",
+      "image" : "assets/images/c (2).png",
       "title" : "Beverages"
     },
     {
-      "image" : "assets/images/c3.png",
+      "image" : "assets/images/c (3).png",
       "title" : "Grocery"
     },
     {
-      "image" : "assets/images/c4.png",
+      "image" : "assets/images/c (4).png",
       "title" : "Edible oil"
     },
     {
-      "image" : "assets/images/5.png",
+      "image" : "assets/images/c (5).png",
       "title" : "Household"
     },
     {
-      "image" : "assets/images/c6.png",
+      "image" : "assets/images/c (6).png",
       "title" : "Babycare"
-    },
+    }
   ];
 
 
